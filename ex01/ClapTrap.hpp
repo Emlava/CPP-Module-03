@@ -15,7 +15,7 @@ class ClapTrap
 	public:
 		// --- Canonical requirements ---
 		// Default constructor
-		ClapTrap(std::string = "without a name");
+		ClapTrap(std::string = "ClapTrap without a name");
 		// Copy constructor
 		ClapTrap(const ClapTrap& other);
 		// Destructor
