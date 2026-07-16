@@ -1,24 +1,26 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string str) : name(str), hit_points(10), energy_points(10), attack_damage(0)
+ClapTrap::ClapTrap(std::string str, unsigned int hp, unsigned int eg, unsigned int ad) :
+	name(str), hit_points(hp), energy_points(eg), attack_damage(ad)
 {
-	std::cout << "\nDefault constructor called\n";
+	std::cout << "\nDefault ClapTrap constructor called\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-	std::cout << "\nCopy constructor called\n";
+	std::cout << "\nClapTrap copy constructor called\n";
 	*this = other;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "\nDestructor called\n";
+	std::cout << "\nClapTrap destructor called\n";
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs_instance)
 {
-	std::cout << "\nCopy assignment operator called\n";
+	std::cout << "\nClapTrap copy assignment operator called\n";
+	std::cout << "Old name: " << name << '\n';
 	if (this != &rhs_instance)
 	{
 		this->name = rhs_instance.name;
@@ -26,6 +28,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs_instance)
 		this->energy_points = rhs_instance.energy_points;
 		this->attack_damage = rhs_instance.attack_damage;
 	}
+	std::cout << "New name: " << name << '\n';
 	return (*this);
 }
 

@@ -3,17 +3,19 @@
 
 int	main(void)
 {
-	ScavTrap	Scav;
-	ScavTrap	Scav2("John");
-	std::string	target = "a random guy";
+	FragTrap	Frag("Timmy");
+	std::string	target = "a random innocent guy";
 
-	Scav.attack(target);
-	Scav2.attack(target);
-	Scav = Scav2;
+	Frag.attack(target);
+	Frag.takeDamage(50);
+	Frag.beRepaired(60);
+	Frag.highFivesGuys();
+	
+	FragTrap	Frag2(Frag);
 
-	Scav.takeDamage(33);
-	Scav.beRepaired(3);
-	Scav.guardGate();
+	Frag2.takeDamage(200);
+	Frag2.beRepaired(200);
+	Frag2.highFivesGuys();
 
 	return (0);
 }

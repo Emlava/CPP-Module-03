@@ -1,7 +1,7 @@
 NAME = tests
 CPPC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
-OBJECTS = main.o ClapTrap.o ScavTrap.o
+OBJECTS = main.o ClapTrap.o ScavTrap.o FragTrap.o
 
 .PHONY: all clean fclean re
 
