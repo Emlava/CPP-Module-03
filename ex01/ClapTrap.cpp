@@ -3,7 +3,8 @@
 ClapTrap::ClapTrap(std::string str, unsigned int hp, unsigned int eg, unsigned int ad) :
 	name(str), hit_points(hp), energy_points(eg), attack_damage(ad)
 {
-	std::cout << "\nDefault ClapTrap constructor called\n";
+	std::cout << "\nClapTrap default constructor called\n";
+	std::cout << "Name: " << name << '\n';
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
@@ -15,6 +16,7 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << "\nClapTrap destructor called\n";
+	std::cout << "Name: " << name << '\n';
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs_instance)
@@ -23,7 +25,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs_instance)
 	std::cout << "Old name: " << name << '\n';
 	if (this != &rhs_instance)
 	{
-		this->name = rhs_instance.name;
+		this->name = "New " + rhs_instance.name;
 		this->hit_points = rhs_instance.hit_points;
 		this->energy_points = rhs_instance.energy_points;
 		this->attack_damage = rhs_instance.attack_damage;

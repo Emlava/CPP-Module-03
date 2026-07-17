@@ -24,13 +24,32 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap& rhs_instance)
 	std::cout << "Old name: " << name << '\n';
 	if (this != &rhs_instance)
 	{
-		this->name = rhs_instance.name;
+		this->name = "New " + rhs_instance.name;
 		this->hit_points = rhs_instance.hit_points;
 		this->energy_points = rhs_instance.energy_points;
 		this->attack_damage = rhs_instance.attack_damage;
 	}
 	std::cout << "New name: " << name << '\n';
 	return (*this);
+}
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (!this->hit_points)
+	{
+		std::cout << '\n' << this->name << " cannot attack beacuse it has no hit points left\n";
+		return ;
+	}
+	if (!this->energy_points)
+	{
+		std::cout << '\n' << this->name << " has no energy points left to attack\n";
+		return ;
+	}
+	this->energy_points--;
+	std::cout << '\n' << this->name << " has the audacity to attack " << target << ", causing "
+		<< this->attack_damage << " point(s) of damage!\n";
+	std::cout << "Current energy points: " << this->energy_points << '\n';
+	return ;
 }
 
 void	ScavTrap::guardGate(void)

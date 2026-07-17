@@ -17,6 +17,6 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap&	operator=(const DiamondTrap& rhs_instance);
 
 		void	whoAmI(void);
-}
+};
 
 #endif

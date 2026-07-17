@@ -5,7 +5,6 @@
 
 class ScavTrap: virtual public ClapTrap
 {
-
 	public:
 		// --- Canonical requirements ---
 		// Default constructor
@@ -15,9 +14,10 @@ class ScavTrap: virtual public ClapTrap
 		// Destructor
 		~ScavTrap(void);
 		// Copy assignment operator
-		ScavTrap&	operator=(const ScavTrap& rhs_instance);
+		virtual ScavTrap&	operator=(const ScavTrap& rhs_instance);
 		// ------------------------------
 
+		void	attack(const std::string& target);
 		void	guardGate(void);
 };
 

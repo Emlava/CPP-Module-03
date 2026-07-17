@@ -1,22 +1,21 @@
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
 int	main(void)
 {
-	FragTrap	Frag("Timmy");
-	std::string	target = "a random innocent guy";
+	DiamondTrap	Diamond("Jack", "Jackie");
+	std::string	target = "a random tough guy";
 
-	Frag.attack(target);
-	Frag.takeDamage(50);
-	Frag.beRepaired(60);
-	Frag.highFivesGuys();
+	Diamond.attack(target);
+	Diamond.takeDamage(50);
+	Diamond.beRepaired(60);
+	Diamond.whoAmI();
 	
-	FragTrap	Frag2(Frag);
+	DiamondTrap	Diamond2(Diamond);
 
-	Frag2.takeDamage(200);
-	Frag2.beRepaired(200);
-	Frag2.highFivesGuys();
+	Diamond2.guardGate();
+	Diamond2.highFivesGuys();
+	Diamond2.takeDamage(200);
+	Diamond2.beRepaired(200);
 
 	return (0);
 }

@@ -25,7 +25,7 @@ FragTrap&	FragTrap::operator=(const FragTrap& rhs_instance)
 	std::cout << "Old name: " << name << '\n';
 	if (this != &rhs_instance)
 	{
-		this->name = rhs_instance.name;
+		this->name = "New " + rhs_instance.name;
 		this->hit_points = rhs_instance.hit_points;
 		this->energy_points = rhs_instance.energy_points;
 		this->attack_damage = rhs_instance.attack_damage;

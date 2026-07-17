@@ -5,7 +5,6 @@
 
 class ScavTrap: public ClapTrap
 {
-
 	public:
 		// --- Canonical requirements ---
 		// Default constructor
@@ -18,6 +17,7 @@ class ScavTrap: public ClapTrap
 		ScavTrap&	operator=(const ScavTrap& rhs_instance);
 		// ------------------------------
 
+		void	attack(const std::string& target);
 		void	guardGate(void);
 };
 
