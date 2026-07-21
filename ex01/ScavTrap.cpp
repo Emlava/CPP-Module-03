@@ -37,7 +37,7 @@ void	ScavTrap::attack(const std::string& target)
 {
 	if (!this->hit_points)
 	{
-		std::cout << '\n' << this->name << " cannot attack beacuse it has no hit points left\n";
+		std::cout << '\n' << this->name << " cannot attack because it has no hit points left\n";
 		return ;
 	}
 	if (!this->energy_points)
